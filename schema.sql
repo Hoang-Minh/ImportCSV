@@ -25,5 +25,24 @@ CREATE TABLE pets(
 INSERT INTO peeps(name, location, petName)
 VALUES("Richie", "Huntington Beach", "Qdog"),("Amanda", "Irvine", "Qcat"),("Sam", "Costa Mesa", "Qbird"),("Jcob", "Los Angeles", "Qbunny"),("Quinton Churchill", "Nowhere", "Quinchilla");
 
+USE peepsandpets_db;
 INSERT INTO pets(name, sound, type, isHouseBroken)
-VALUES("Qdog", "Meow", "Cat", false),("Qcat", "Woff", "Dog", true),("Qdbird", "Hoot", "Owl", true),("Qbunny", "We don't know", "Fox", false)
+VALUES("Qdog", "Meow", "Cat", false),("Qcat", "Woff", "Dog", true),("Qbird", "Hoot", "Owl", true),("Qbunny", "We don't know", "Fox", false);
+
+DROP TABLE pets;
+
+SELECT peeps.name, peeps.location, pets.name, pets.type, pets.sound
+FROM peeps
+INNER JOIN pets
+ON peeps.petName = pets.name;
+
+
+SELECT peeps.name, peeps.location, pets.name, pets.type, pets.sound
+FROM peeps
+LEFT JOIN pets
+ON peeps.petName = pets.name;
+
+SELECT peeps.name, peeps.location, pets.name, pets.type, pets.sound
+FROM peeps
+RIGHT JOIN pets
+ON peeps.petName = pets.name;

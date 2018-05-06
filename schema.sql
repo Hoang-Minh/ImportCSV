@@ -27,7 +27,7 @@ VALUES("Richie", "Huntington Beach", "Qdog"),("Amanda", "Irvine", "Qcat"),("Sam"
 
 USE peepsandpets_db;
 INSERT INTO pets(name, sound, type, isHouseBroken)
-VALUES("Qdog", "Meow", "Cat", false),("Qcat", "Woff", "Dog", true),("Qbird", "Hoot", "Owl", true),("Qbunny", "We don't know", "Fox", false);
+VALUES("Qdog", "Meow", "Cat", false),("Qcat", "Woff", "Dog", true),("Qbird", "Hoot", "Owl", true),("Qbunny", "We don't know", "Fox", false),("QWhale", "pewpew", "lemur", false);
 
 DROP TABLE pets;
 
